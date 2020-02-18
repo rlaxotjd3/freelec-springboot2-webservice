@@ -42,5 +42,6 @@ dependencies는 프로젝트 개발에 필요한 의존성들을 선언하는 �
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
+    testCompile 'org.assertj:assertj-core:3.6.2'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
