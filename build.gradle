@@ -50,7 +50,7 @@ dependencies는 프로젝트 개발에 필요한 의존성들을 선언하는 �
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
-    compile('org.springframework.boot:spring-boot0starter-dadta-jpa')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
 
     compile('com.h2database:h2')
     testCompile 'org.assertj:assertj-core:3.6.2'
