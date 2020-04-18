@@ -58,8 +58,8 @@ public class PostsService {
      * 변경하면, 별도로 update 쿼리를 날릴 필요가 없다는 것. 이 개념을 더티 체킹 방식이라고 합니다.
      * ㄴ*/
 
-    public PostsResponseDto findById(Long id) {
-        Posts entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException(("해당 사용자가 없습니다. iid = " + id)));
+        public PostsResponseDto findById(Long id) {
+            Posts entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException(("해당 사용자가 없습니다. iid = " + id)));
         return new PostsResponseDto(entity);
     }
 
