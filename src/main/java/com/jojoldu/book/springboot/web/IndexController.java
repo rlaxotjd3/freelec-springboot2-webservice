@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.web;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -9,11 +10,17 @@ import org.springframework.web.bind.annotation.GetMapping;
  * 즉 여기선 "index"를 반환하므로 src/main/resources/templates/index.mustache로 전환되어 View Resolver가 처리하게 됩니다.
  *
  */
+@RequiredArgsConstructor
 @Controller
 public class IndexController {
 
     @GetMapping("/")
     public String index() {
         return "index";
+    }
+
+    @GetMapping("/posts/save")
+    public String postsSave() {
+        return "posts-save";
     }
 }
