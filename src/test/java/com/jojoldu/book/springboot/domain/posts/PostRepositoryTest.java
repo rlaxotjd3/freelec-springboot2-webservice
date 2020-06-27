@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import static org.hamcrest.core.Is.is;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -61,6 +62,7 @@ import static org.assertj.core.api.Assertions.assertThat;
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
+        assertThat("asdf", is("asdf"));
 
     }
 
