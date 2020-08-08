@@ -2,6 +2,9 @@ package com.jojoldu.book.springboot.config.auth.dto;
 
 import com.jojoldu.book.springboot.domain.user.User;
 import lombok.Getter;
+
+import java.io.Serializable;
+
 /*
 * SessionUser에는 인증된 사용자 정보만 필요합니다. 그 외에 필요한 정보들은 없으니, name, email, picture 만 필드로 선언합니다.
 * 왜 User 클래스를 그대로 사용하면 안되는지?
@@ -14,7 +17,7 @@ import lombok.Getter;
 * 그래서 직렬화 기능을 가진 세션 DTO 를 하나 추가로 만드는 것이 이후 운영 및 유지보수 때 많은 도움이 된다.
 */
 @Getter
-public class SessionUser {
+public class SessionUser implements Serializable {
     private String name;
     private String email;
     private String picture;
